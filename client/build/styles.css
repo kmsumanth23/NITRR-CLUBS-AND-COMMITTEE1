@@ -1,0 +1,512 @@
+/* Define color variables */
+:root {
+    --primary-color: #55AD9B; /* Primary button color, headings */
+    --secondary-color: #95D2B3; /* Secondary button color, borders */
+    --background-color: #D8EFD3; /* Background color */
+    --accent-color: #F1F8E8; /* Accent color, lighter background */
+    --text-color: #333333; /* Text color */
+    --heading-color: #000000; /* Heading color */
+    --hover-color: #45a049; /* Hover color for buttons */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.login-icon-container {
+    position: absolute; /* Absolute positioning */
+    right: 20px;
+}
+
+/* Added styles for login icon */
+.gg-log-in {
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer; /* Add a pointer cursor on hover */
+    transition: color 0.3s;
+}
+
+.gg-log-in:hover {
+    color: var(--secondary-color); /* Change color on hover */
+}
+
+.section {
+    padding: 40px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.section:nth-child(even) {
+    background-color: var(--accent-color);
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+    margin: 0 0 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex img {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+/* Transparent button with rounded edges */
+button {
+    background-color: transparent; /* Make the button transparent */
+    color: var(--primary-color); /* Use the primary color for the text */
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color); /* Add a border with the primary color */
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: var(--primary-color); /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+
+@media (max-width: 768px) {
+    .flex img {
+        width: 100%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+.scrollable {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.scrollable img, .scrollable video {
+    max-width: 200px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.club-section {
+    margin-bottom: 40px;
+}
+
+.club-section h2 {
+    margin-top: 0;
+}
+
+#join-now {
+    text-align: center;
+    padding: 320px 180px 220px; /* Adjust the padding to create the desired gap */
+    background-color: var(--background-color);
+}
+/* Different fonts for each word in the heading */
+#join-now h2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Add some spacing between words */
+    font-size: 60px;
+}
+
+#join-now h2 span {
+    display: inline-block;
+}
+
+#join-now h2 .word1 {
+    font-family: 'Roboto', sans-serif; /* First word font */
+}
+
+#join-now h2 .word2 {
+    font-family: 'Lobster', cursive; /* Second word font */
+}
+
+#join-now h2 .word3 {
+    font-family: "Permanent Marker", cursive; /* Third word font */
+}
+#join-now h2 .word4 {
+    font-family: 'Playwrite ES Deco', cursive; /* Third word font */
+}
+
+
+#about-us {
+    padding: 50px 0;
+}
+
+/* Our Clubs Content */
+.our-clubs-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    text-align: left;
+}
+
+.our-clubs-content .left {
+    margin-bottom: 20px;
+}
+
+.our-clubs-content .left p {
+    margin-bottom: 10px; /* Add some space between the text and the image */
+}
+
+.our-clubs-content .left img {
+    display: block;
+    object-fit: contain;
+    height: 650px; /* Ensures the image behaves as a block element */
+    margin: 0 auto 20px; /* Center the image and add a gap below */
+}
+
+.our-clubs-content .left button {
+    display: block;
+    margin: 0 auto; /* Center the button */
+}
+.our-clubs-content img {
+    border-radius:30px; /* Make the images circular */
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Form */
+.form {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+}
+
+/* .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 300px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+} */
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: var(--accent-color);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* button {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+} */
+
+
+/* Sign-Up Modal Styles */
+#signUpModal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+#signUpModal .modal-content {
+    background-color: var(--accent-color);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+
+}
+
+#signUpModal .close-signup {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#signUpModal .close-signup:hover,
+#signUpModal .close-signup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Authorized user Modal Styles */
+#authorisedModal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+#authorisedModal .modal-content {
+    background-color: var(--accent-color);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+
+}
+
+#authorisedModal .close-authorised {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#authorisedModal .close-authorised:hover,
+#authorisedModal .close-authorised:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#authorisedModal .form-group {
+    margin-bottom: 15px;
+}
+
+#authorisedModal input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+
+/* club.html */
+/* Clubs Grid */
+.clubs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Club Item sare clubs ka page*/
+.club-item {
+    text-align: center;
+    width: 150px;
+}
+
+.club-item img {
+    width: 100%;
+    border-radius: 50%; /* Make the images circular */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.club-item img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.club-item p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+/* User Icon and Dropdown Menu */
+.user-icon-container {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.user-icon-container .gg-user-list {
+    color: white;
+    font-size: 1.5em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--primary-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color);
+}
+
+.gg-log-in {
+    margin-right: 100px; /* Space between icon and text */
+    flex-shrink: 0; /* Space between icon and text */
+}
+.show {
+    display: block;
+}
+/* user profilr and logout */
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    font-size: 50px;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
