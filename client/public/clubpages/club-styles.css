@@ -1,0 +1,107 @@
+.club-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.club-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.club-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.club-content {
+    text-align: left;
+}
+
+.club-content section {
+    margin-bottom: 40px;
+}
+
+.club-content h2 {
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.coordinator-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.coordinator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.coordinator img {
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.club-apply button {
+    background-color: transparent; /* Make the button transparent */
+    color: var(--primary-color); /* Use the primary color for the text */
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color); /* Add a border with the primary color */
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hove*/
+}
+
+.club-apply button:hover {
+    background-color: var(--primary-color); /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+.club-apply p {
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+.club-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.club-socials .social-icon {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.club-socials .social-icon:hover {
+    color: var(--hover-color);
+}
+
+
