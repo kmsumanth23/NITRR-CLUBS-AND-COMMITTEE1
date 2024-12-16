@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const password = document.getElementById("loginPassword").value;
 
       try {
-        const response = await fetch("http://localhost:5501/api/users/login", {
+        const response = await fetch(`${process.env.REACT_APP_FRONTEND_CONN}/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const password = document.getElementById("authLoginPassword").value;
 
       try {
-        const response = await fetch("http://localhost:5501/api/users/login", {
+        const response = await fetch(`${process.env.REACT_APP_FRONTEND_CONN}/auth-login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
